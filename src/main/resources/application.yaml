@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: blogging-platform-api
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: blogging-platform
+      username: username123
+      password: password123
+      uri: mongodb://username123:password123@localhost:27017/blogging-platform
+      auto-index-creation: true
+      uuid-representation: standard

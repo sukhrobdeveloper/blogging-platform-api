@@ -8,26 +8,29 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "tags")
-public class Tag {
+@Document(collection = "blogs")
+public class Blog {
 
     @Id
     private UUID id;
 
     @Indexed(unique = true)
-    private String name;
+    private String title;
+
+    private String content;
+
+    private UUID categoryId;
+
+    private List<String> tags;
 
     private Timestamp createdAt;
 
     private Timestamp updatedAt;
 
-    public Tag(UUID id) {
-        this.id = id;
-    }
-    
 }

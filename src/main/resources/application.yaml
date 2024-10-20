@@ -3,11 +3,9 @@ spring:
     name: blogging-platform-api
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: blogging-platform
-      username: username123
-      password: password123
-      uri: mongodb://username123:password123@localhost:27017/blogging-platform
+      uri: mongodb://username123:password123@localhost:27017/blogging-platform?authSource=admin
       auto-index-creation: true
       uuid-representation: standard
+
+server:
+  port: 8083
